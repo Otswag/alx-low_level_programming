@@ -16,7 +16,11 @@ int main(void)
 		putchar(n);
 		n += 1;
 	}
+<<<<<<< HEAD
 	putchar('\n');
 
+=======
+	    putchar('\n');
+>>>>>>> 1f9844aef19d52ad7c8ac11c95e589986415adb5
 	return (0);
 }
