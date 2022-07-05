@@ -1,4 +1,4 @@
-#include "=main.h"
+#include "main.h"
 
 /**
  * main - program that prints Holberton.
@@ -18,4 +18,5 @@ n += 1;
 }
 _putchar('\n');
 return (0);
+
 }
