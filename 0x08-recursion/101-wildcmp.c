@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * test - tests if wildcard is a proper match
@@ -9,6 +10,7 @@
  *
  * Return: spot that matches or NULL
  */
+
 char *test(char *s5, char *s6, char *t5, char *t6)
 {
 	if (*s6 == '*' || (*s5 == '\0' && *s6 == '\0'))
