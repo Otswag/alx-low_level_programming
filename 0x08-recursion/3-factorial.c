@@ -1,13 +1,11 @@
 #include "main.h"
 
 /**
- * factorial - returns the factorial of a given number.
+ * factorial - returns the factorial of a given number
+ * @n: integer to take factorial of
  *
- * @n: input number
- *
- * Return: int
+ * Return: factorial of n, or -1 if n < 0
  */
-
 int factorial(int n)
 {
 	if (n < 0)
