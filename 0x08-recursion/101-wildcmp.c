@@ -1,6 +1,3 @@
-#include "main.h"
-#include <stdio.h>
-
 /**
  * test - tests if wildcmp is a proper match
  * @s5: string to compare
