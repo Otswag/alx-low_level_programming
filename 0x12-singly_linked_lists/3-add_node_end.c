@@ -12,32 +12,32 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	int i = 0;
-	list_t *new, *f;
+	list_t *otswag, *f;
 
 	while (str[i])
 		i++;
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	otswag = malloc(sizeof(list_t));
+	if (otswag == NULL)
 		return (NULL);
-	new->str = strdup(str);
-	new->len = i;
-	new->next = NULL;
+	otswag->str = strdup(str);
+	otswag->len = i;
+	otswag->next = NULL;
 	if (strdup(str) == NULL)
 	{
-		free(new);
+		free(otswag);
 		return (NULL);
 	}
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = otswag;
+		return (otswag);
 	}
 	else
 	{
 		f = *head;
 		while (f->next != NULL)
 			f = f->next;
-		f->next = new;
-		return (new);
+		f->next = otswag;
+		return (otswag);
 	}
 }
