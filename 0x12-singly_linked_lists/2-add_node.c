@@ -2,39 +2,30 @@
 #include <stdio.h>
 #include "lists.h"
 #include <string.h>
-
 /**
- * add_node - function that prints all the elements of a list_t list
- * @head: input header pointer
- * @str: Input string value
- * Return: address of the new element, or NULL if it failed
+ * add_node - adds a new node
+ * @head: head address i think
+ * @str: string to put through
+ * Return: returns an address of new node
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node;
+	list_t *new;
+	int i = 0;
 
-	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->len = _strlen(str);
-	new_node->str = strdup(str);
-	new_node->next = *head;
-	*head = new_node;
-	return (new_node);
-}
-
-/**
- * _strlen - returns length of string
- * @s: character of string
- * Return: length of string
- */
-
-int _strlen(const char *s)
-{
-	int i;
-
-	while (s[i] != 0)
+	while (str[i])
 		i++;
-	return (i);
+
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+	{
+		return (NULL);
+	}
+	new->str = strdup(str);
+	new->len = i;
+	new->next = *head;
+
+	*head = new;
+
+	return (new);
 }
