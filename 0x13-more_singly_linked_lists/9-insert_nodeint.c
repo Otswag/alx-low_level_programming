@@ -4,7 +4,7 @@
 /**
  * insert_nodeint_at_index - function that inserts a new node at given position
  * @head: head of the node
- * @index: index where to place node
+ * @idx: index where to place node
  * @n: data for the node
  * Return: the address of new node
  */
@@ -22,21 +22,21 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->next = NULL;
 	tmp = *head;
 	i = 0;
-	if (*head == NULL && index > 0)
+	if (*head == NULL && idx > 0)
 	{
 		free(new_node);
 		return (NULL);
 	}
-	if (index == 0)
+	if (idx == 0)
 	{
 		new_node->next = *head;
 		*head = new_node;
 		return (new_node);
 	}
-	while (i < index - 1)
+	while (i < idx - 1)
 	{
 		tmp = tmp->next;
-		if (tmp == NULL && index - i > 0)
+		if (tmp == NULL && idx - i > 0)
 		{
 			free(new_node);
 			return (NULL);
@@ -54,7 +54,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 /**
  * insert_nodeint_at_index - function that inserts a new node at given position
  * @head: head of the node
- * @index: index where to place node
+ * @idx: index where to place node
  * @n: data for the node
  * Return: the address of new node
  */
@@ -72,21 +72,21 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->next = NULL;
 	tmp = *head;
 	i = 0;
-	if (*head == NULL && index > 0)
+	if (*head == NULL && idx > 0)
 	{
 		free(new_node);
 		return (NULL);
 	}
-	if (index == 0)
+	if (idx == 0)
 	{
 		new_node->next = *head;
 		*head = new_node;
 		return (new_node);
 	}
-	while (i < index - 1)
+	while (i < idx - 1)
 	{
 		tmp = tmp->next;
-		if (tmp == NULL && index - i > 0)
+		if (tmp == NULL && idx - i > 0)
 		{
 			free(new_node);
 			return (NULL);
