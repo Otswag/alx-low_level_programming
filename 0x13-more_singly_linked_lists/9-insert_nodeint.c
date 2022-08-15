@@ -46,7 +46,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int index, int n)
 	new_node->next = tmp->next;
 	tmp->next = new_node;
 	return (new_node);
-}#include <stdlib.h>
+}
+
+#include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
 /**
