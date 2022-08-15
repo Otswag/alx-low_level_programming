@@ -8,28 +8,28 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *turtle, *hare;
+	listint_t *Tom, *Jerry;
 
-	/* determine if loop exists by seeing if turtle and hare meets */
-	/* start them at head, move turtle one node and hare two nodes */
-	turtle = hare = head;
+	/* determine if loop exists by seeing if Tom and Jerry meets */
+	/* start them at head, move Tom one node and Jerry two nodes */
+	Tom = Jerry = head;
 
-	while (turtle != NULL && hare != NULL)
+	while (Tom != NULL && Jerry != NULL)
 	{
-		turtle = turtle->next;
-		hare = hare->next->next;
+		Tom = Tom->next;
+		Jerry = Jerry->next->next;
 
-		if (turtle == hare)
+		if (Tom == Jerry)
 		{
-			/* start turtle at head and hare at address they met */
-			/* move turtle and hare one node to find loop origin */
-			turtle = head;
-			while (turtle != hare)
+			/* start Tom at head and Jerry at address they met */
+			/* move Tom and Jerry one node to find loop origin */
+			Tom = head;
+			while (Tom != Jerry)
 			{
-				turtle = turtle->next;
-				hare = hare->next;
+				Tom = Tom->next;
+				Jerry = Jerry->next;
 			}
-			return (turtle);
+			return (Tom);
 		}
 	}
 
